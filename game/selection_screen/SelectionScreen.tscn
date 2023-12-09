@@ -34,7 +34,7 @@ theme_override_constants/margin_bottom = 20
 [node name="PrimaryInformation" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Secondary Information" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+[node name="SecondaryInformation" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
