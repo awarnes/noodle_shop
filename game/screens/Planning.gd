@@ -5,6 +5,4 @@ func _on_quit_button_pressed():
 
 
 func _on_food_button_pressed():
-	# get resource
-	# load selection screen with resource
-	pass
+	Global.goto_scene("res://game/selection_screen/FoodSelectionScreen.tscn")
