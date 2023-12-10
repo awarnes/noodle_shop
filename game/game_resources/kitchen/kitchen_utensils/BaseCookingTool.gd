@@ -6,7 +6,8 @@ enum CookingToolType {
 	DeepFryer,
 	Pan,
 	Pot,
-	Spatula,
+	Utensil,
 }
 
 @export var type: CookingToolType
+@export var quality_bonus: int

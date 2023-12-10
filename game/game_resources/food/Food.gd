@@ -1,19 +1,17 @@
 class_name Food extends Resource
 
+var title: String
+var icon: Image
+var description: String
+
 enum FoodType {
 	Noodle,
-	Rice,
 	Vegetable,
 	Meat,
 	Fruit,
 	Broth,
 	Condiment,
 }
-
-var title: String
-var icon: Image
-var description: String
-
 var type: FoodType
 
 var base_cost: int
@@ -36,6 +34,12 @@ func can_prepare():
 			return false
 	return true
 
-func calculate_quality(prep_tool: BasePrepTool):
-	return base_quality + prep_tool.quality_bonus
+#func calculate_quality(prep_tool: BasePrepTool):
+	#var quality = base_quality
+	#for method in preparation_methods:
+		#for tool in method.required_prep_tools:
+			#quality += tool.quality_bonus
+		#for tool in method.required_cooking_tools:
+			#quality += tool.quality_bonus
+	#return quality
 

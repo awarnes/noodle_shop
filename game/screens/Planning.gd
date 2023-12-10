@@ -5,4 +5,15 @@ func _on_quit_button_pressed():
 
 
 func _on_food_button_pressed():
-	Global.goto_scene("res://game/selection_screen/FoodSelectionScreen.tscn")
+	var food_screen_data = FoodScreenData.new()
+	prints(food_screen_data.selection_items)
+	Global.goto_scene(
+		"res://game/screens/selection_screen/SelectionScreen.tscn",
+		food_screen_data
+	)
+
+func _on_kitchen_button_pressed():
+	prints("pressed button!")
+	var boil = load("res://game/game_resources/food/preparations/PreparationBoil.gd")
+	prints(boil)
+	prints(boil.new().required_cooking_tools)
