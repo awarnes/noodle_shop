@@ -1,8 +1,4 @@
-class_name Food extends Resource
-
-var title: String
-var icon: Image
-var description: String
+class_name Food extends GameResource
 
 enum FoodType {
 	Noodle,
@@ -24,6 +20,22 @@ var current_shelf_life: int
 var preparation_methods: Array[PreparationMethod]
 
 var base_quality: int
+
+func get_attributes() -> Array[Variant]:
+	
+	return [
+		"Food Type: %s" % type,
+		"Base Cost: %s" % base_cost,
+		"Base Quality: %s" % base_quality,
+		"Base Shelf Life: %s" % base_shelf_life,
+		[
+			"Preparation Methods:",
+		],
+		"Storage Method: %s" % storage_method.
+		"preparation_methods": preparation_methods,
+		"storage_method": storage_method,
+		
+	]
 
 func calculate_cost():
 	return base_cost + (1 * base_quality)

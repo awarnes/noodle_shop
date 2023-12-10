@@ -1,6 +1,7 @@
 class_name PreparationMethod extends Resource
 
 # mix of required prep tools and cooking tools
+@export var title: String
 @export var required_prep_tools: Array[BasePrepTool.PrepToolType]
 @export var required_cooking_tools: Array[BaseCookingTool.CookingToolType]
 

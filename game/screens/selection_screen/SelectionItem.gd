@@ -17,3 +17,8 @@ func _ready():
 	
 	item_icon = get_node("MarginContainer/HBoxContainer/MarginContainer/Icon")
 	item_icon.texture = ImageTexture.create_from_image(icon)
+
+
+func _on_pressed():
+	var position = get_parent().get_children().find(self)
+	prints("{title} {position}".format({"title": title, "position": position}))
