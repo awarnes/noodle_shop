@@ -33,7 +33,7 @@ func _update_primary_data(selection_data: SelectionItemData):
 		selection_data.title,
 		selection_data.description,
 		selection_data.icon,
-		selection_data.get_attributes()
+		selection_data.item.get_attributes_display()
 	)
 	#primary_icon = get_node("MarginContainer/VBoxContainer/HBoxContainer/PrimaryInformation/VBoxContainer/Icon")
 	#primary_icon.texture = ImageTexture.create_from_image(selection_data.icon)

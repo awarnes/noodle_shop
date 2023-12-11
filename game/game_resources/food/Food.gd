@@ -21,19 +21,14 @@ var preparation_methods: Array[PreparationMethod]
 
 var base_quality: int
 
-func get_attributes() -> Array[Variant]:
-	
+func get_attributes_display() -> Array[Node]:
+	var helper = Helpers.new()
 	return [
-		"Food Type: %s" % type,
-		"Base Cost: %s" % base_cost,
-		"Base Quality: %s" % base_quality,
-		"Base Shelf Life: %s" % base_shelf_life,
-		[
-			"Preparation Methods:",
-		],
-		"Storage Method: %s" % storage_method.
-		"preparation_methods": preparation_methods,
-		"storage_method": storage_method,
+		helper.create_label("Food Type: %s" % type),
+		helper.create_label("Base Cost: %s" % base_cost),
+		helper.create_label("Base Quality: %s" % base_quality),
+		helper.create_label("Base Shelf Life: %s" % base_shelf_life),
+		helper.create_label("Storage Method: %s" % BaseStorage.new().get_tool_name(storage_method)),
 		
 	]
 

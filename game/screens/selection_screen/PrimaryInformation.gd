@@ -1,12 +1,17 @@
 class_name PrimaryInformation extends MarginContainer
 
-@onready var title: Label = get_node("VBoxContainer/HBoxContainer/VBoxContainer/Title")
-@onready var description: Label = get_node("VBoxContainer/HBoxContainer/VBoxContainer/Description")
-@onready var icon: TextureRect = get_node("VBoxContainer/HBoxContainer/Icon")
+var title: Label
+var description: Label
+var icon: TextureRect
 
 func _init(resource_title: String, resource_description: String, resource_icon: Image, attributes = null):
+	title = get_node("VBoxContainer/HBoxContainer/VBoxContainer/Title")
 	title.text = resource_title
+	
+	description = get_node("VBoxContainer/HBoxContainer/VBoxContainer/Description")
 	description.text = resource_description
+	
+	icon = get_node("VBoxContainer/HBoxContainer/Icon")
 	icon.texture = ImageTexture.create_from_image(resource_icon)
 	
 	if attributes and attributes.size():
