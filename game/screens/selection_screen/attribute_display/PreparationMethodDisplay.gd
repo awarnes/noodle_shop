@@ -2,6 +2,7 @@ class_name PreparationMethodDisplay extends MarginContainer
 
 @onready var title = get_node("VBoxContainer/Label")
 @onready var container = get_node("VBoxContainer")
+
 func _init(method: PreparationMethod):
 	title.text = method.title
 	if (method.required_prep_tools.size()):

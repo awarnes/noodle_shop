@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2b633bxvawof"]
+[gd_scene load_steps=2 format=3 uid="uid://c2b633bxvawof"]
 
 [ext_resource type="Script" path="res://game/screens/selection_screen/SelectionScreen.gd" id="1_g13o1"]
-[ext_resource type="PackedScene" uid="uid://c3cvg6q6qyeks" path="res://game/screens/selection_screen/PrimaryInformation.tscn" id="2_s5p43"]
 
 [node name="SelectionScreen" type="Control"]
 layout_mode = 3
@@ -28,11 +27,10 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
 theme_override_constants/separation = 20
 alignment = 1
-
-[node name="PrimaryInformation" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_s5p43")]
-layout_mode = 2
 
 [node name="ItemDetails" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -45,6 +43,8 @@ layout_mode = 2
 
 [node name="SelectionItemContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer/SelectionItemContainer"]
 layout_mode = 2
