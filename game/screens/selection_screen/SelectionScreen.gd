@@ -14,8 +14,6 @@ func _ready():
 		var grid_container = GridContainer.new()
 		grid_container.columns = 5
 		grid_container.name = group.title
-		#grid_container.h_separation = 15
-		#grid_container.v_separation = 15
 		
 		for item: SelectionItemData in group.selection_items:
 			var selection_item = preload("res://game/screens/selection_screen/SelectionItem.tscn").instantiate()
@@ -44,14 +42,6 @@ func _update_primary_data(selection_data: SelectionItemData):
 	var hbox = get_node("MarginContainer/VBoxContainer/HBoxContainer")
 	hbox.add_child(primary_information)
 	hbox.move_child(primary_information, 0)
-	#primary_icon = get_node("MarginContainer/VBoxContainer/HBoxContainer/PrimaryInformation/VBoxContainer/Icon")
-	#primary_icon.texture = ImageTexture.create_from_image(selection_data.icon)
-	#
-	#primary_title = get_node("MarginContainer/VBoxContainer/HBoxContainer/PrimaryInformation/VBoxContainer/Title")
-	#primary_title.text = selection_data.title
-	#
-	#primary_description = get_node("MarginContainer/VBoxContainer/HBoxContainer/PrimaryInformation/VBoxContainer/Description")
-	#primary_description.text = selection_data.description
 	
 func _update_secondary_data(selection_data: SelectionItemData):
 	prints(selection_data.item.__dict__())
