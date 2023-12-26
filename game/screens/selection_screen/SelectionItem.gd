@@ -20,5 +20,5 @@ func _ready():
 
 
 func _on_pressed():
-	var position = get_parent().get_children().find(self)
-	prints("{title} {position}".format({"title": title, "position": position}))
+	var pos = get_parent().get_children().find(self)
+	prints("{title} {pos}".format({"title": title, "pos": pos}))

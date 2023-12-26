@@ -1,11 +1,11 @@
-class_name Shrimp extends Food
+class_name ShitakeMushrooms extends Food
 
 func _init():
-	title = "Shrimp"
-	description = "Delicious Shrimp"
+	title = "Shitake Mushroom"
+	description = "Delicious Shitake Mushroom"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Meat
+	type = FoodType.Vegetable
 
 	base_cost = 500
 

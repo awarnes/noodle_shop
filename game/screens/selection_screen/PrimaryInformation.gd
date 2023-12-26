@@ -1,5 +1,6 @@
 class_name PrimaryInformation extends MarginContainer
 
+var scroll_container: ScrollContainer
 var vbox_outer: VBoxContainer
 var hbox: HBoxContainer
 var icon: TextureRect
@@ -14,6 +15,9 @@ func _init(resource_title: String, resource_description: String, resource_icon: 
 	
 	hbox = HBoxContainer.new()
 	vbox_outer.add_child(hbox)
+	
+	# TODO: May need to figure out scorll containers at some point
+	
 	icon = TextureRect.new()
 	icon.texture = ImageTexture.create_from_image(resource_icon)
 	hbox.add_child(icon)
@@ -30,14 +34,14 @@ func _init(resource_title: String, resource_description: String, resource_icon: 
 	vbox_inner.add_child(description)
 	
 	if attributes and attributes.size():
-		var scroll_container = ScrollContainer.new()
+		#var scroll_container = ScrollContainer.new()
 		var vbox_container = VBoxContainer.new()
 		
 		for attribute in attributes:
 			vbox_container.add_child(attribute)
 		
-		scroll_container.add_child(vbox_container)
-		vbox_outer.add_child(scroll_container)
+		#scroll_container.add_child(vbox_container)
+		vbox_outer.add_child(vbox_container)
 	
 	
 	

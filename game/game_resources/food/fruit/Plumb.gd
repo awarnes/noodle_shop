@@ -1,8 +1,8 @@
-class_name Apple extends Food
+class_name Plumb extends Food
 
 func _init():
-	title = "Apple"
-	description = "Apple-y fruit"
+	title = "Plumb"
+	description = "Plumb-y fruit"
 	icon = "res://icon.svg"
 	
 	type = FoodType.Fruit

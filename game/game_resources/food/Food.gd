@@ -10,6 +10,21 @@ enum FoodType {
 }
 var type: FoodType
 
+func get_food_type(food_type: FoodType):
+	match food_type:
+		FoodType.Noodle:
+			return "Noodle"
+		FoodType.Vegetable:
+			return "Vegetable"
+		FoodType.Meat:
+			return "Meat"
+		FoodType.Fruit:
+			return "Fruit"
+		FoodType.Broth:
+			return "Broth"
+		FoodType.Condiment:
+			return "Condiment"
+
 var base_cost: int
 
 var storage_method: BaseStorage.StorageType
@@ -24,12 +39,11 @@ var base_quality: int
 func get_attributes_display() -> Array[Node]:
 	var helper = Helpers.new()
 	return [
-		helper.create_label("Food Type: %s" % type),
+		helper.create_label("Food Type: %s" % get_food_type(type)),
 		helper.create_label("Base Cost: %s" % base_cost),
 		helper.create_label("Base Quality: %s" % base_quality),
 		helper.create_label("Base Shelf Life: %s" % base_shelf_life),
 		helper.create_label("Storage Method: %s" % BaseStorage.new().get_tool_name(storage_method)),
-		
 	]
 
 func calculate_cost():
