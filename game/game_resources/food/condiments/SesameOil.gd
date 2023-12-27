@@ -1,11 +1,12 @@
-class_name SesameOil extends Food
+class_name SesameOil extends BaseCondiment
 
 func _init():
+	super()
 	title = "Sesame Oil"
 	description = "Sesame Oil-y condiment"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Condiment
+	sub_type = CondimentSubType.Sauce
 
 	base_cost = 150
 

@@ -1,11 +1,9 @@
-class_name RamenNoodles extends Food
+class_name RamenNoodles extends BaseNoodle
 
 func _init():
 	title = "Ramen Noodles"
 	description = "Delicious Ramen Noodles"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Noodle
 
 	base_cost = 500
 

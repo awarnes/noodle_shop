@@ -1,11 +1,9 @@
-class_name Beef extends Food
+class_name Beef extends BaseMeat
 
 func _init():
 	title = "Beef"
 	description = "Delicious Beef"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Meat
 
 	base_cost = 500
 

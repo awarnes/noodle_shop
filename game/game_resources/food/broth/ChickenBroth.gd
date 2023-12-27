@@ -1,11 +1,9 @@
-class_name ChickenBroth extends Food
+class_name ChickenBroth extends BaseBroth
 
 func _init():
 	title = "Chicken Broth"
 	description = "Delicious Chicken Broth"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Broth
 
 	base_cost = 200
 

@@ -1,11 +1,12 @@
-class_name SweetPea extends Food
+class_name SweetPea extends BaseVegetable
 
 func _init():
+	super()
 	title = "Sweet Pea"
 	description = "Delicious Sweet Pea"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Mushroom
 
 	base_cost = 500
 

@@ -10,7 +10,7 @@ enum FoodType {
 }
 var type: FoodType
 
-func get_food_type(food_type: FoodType):
+func get_food_name(food_type: FoodType):
 	match food_type:
 		FoodType.Noodle:
 			return "Noodle"
@@ -39,7 +39,7 @@ var base_quality: int
 func get_attributes_display() -> Array[Node]:
 	var helper = Helpers.new()
 	return [
-		helper.create_label("Food Type: %s" % get_food_type(type)),
+		helper.create_label("Food Type: %s" % get_food_name(type)),
 		helper.create_label("Base Cost: %s" % base_cost),
 		helper.create_label("Base Quality: %s" % base_quality),
 		helper.create_label("Base Shelf Life: %s" % base_shelf_life),

@@ -1,11 +1,12 @@
-class_name PlumbSauce extends Food
+class_name PlumbSauce extends BaseCondiment
 
 func _init():
+	super()
 	title = "Plumb Sauce"
 	description = "Plumb-y condiment"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Condiment
+	sub_type = CondimentSubType.Sauce
 
 	base_cost = 150
 

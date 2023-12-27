@@ -1,11 +1,9 @@
-class_name VegetableBroth extends Food
+class_name VegetableBroth extends BaseBroth
 
 func _init():
 	title = "Vegetable Broth"
 	description = "Delicious Vegetable Broth"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Broth
 
 	base_cost = 100
 

@@ -1,13 +1,12 @@
-class_name SoySauce extends Food
+class_name SoySauce extends BaseCondiment
 
 func _init():
+	super()
 	title = "Soy Sauce"
 	description = "Soy-y condiment"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Condiment
-
-	base_cost = 150
+	sub_type = CondimentSubType.Sauce
 
 	storage_method = BaseStorage.StorageType.Dry
 

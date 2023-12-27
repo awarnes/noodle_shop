@@ -1,12 +1,13 @@
-class_name Garlic extends Food
+class_name Garlic extends BaseVegetable
 
 func _init():
+	super()
 	title = "Garlic"
 	description = "Delicious Garlic"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
-
+	sub_type = VegetableSubType.Allium
+	
 	base_cost = 500
 
 	storage_method = BaseStorage.StorageType.Refrigerator

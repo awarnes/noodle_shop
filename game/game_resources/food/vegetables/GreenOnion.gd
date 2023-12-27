@@ -1,11 +1,12 @@
-class_name GreenOnion extends Food
+class_name GreenOnion extends BaseVegetable
 
 func _init():
+	super()
 	title = "Green Onion"
 	description = "Delicious Green Onion"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Allium
 
 	base_cost = 500
 

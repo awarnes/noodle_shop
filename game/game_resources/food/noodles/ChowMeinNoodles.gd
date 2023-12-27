@@ -1,11 +1,9 @@
-class_name ChowMeinNoodles extends Food
+class_name ChowMeinNoodles extends BaseNoodle
 
 func _init():
 	title = "Chow Mein Noodles"
 	description = "Delicious Chow Mein Noodles"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Meat
 
 	base_cost = 500
 

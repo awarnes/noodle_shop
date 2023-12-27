@@ -1,11 +1,9 @@
-class_name Tofu extends Food
+class_name Tofu extends BaseMeat
 
 func _init():
 	title = "Tofu"
 	description = "Delicious Tofu"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Meat
 
 	base_cost = 500
 

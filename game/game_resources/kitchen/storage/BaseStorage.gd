@@ -1,4 +1,4 @@
-class_name BaseStorage extends BaseKitchenObject
+class_name BaseStorage extends GameResource
 
 enum StorageType {
 	Dry,

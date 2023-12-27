@@ -58,7 +58,7 @@ func _init():
 	var groups = {}
 	
 	for food_item in food:
-		var food_type = Food.new().get_food_type(food_item.type)
+		var food_type = Food.new().get_food_name(food_item.type)
 		if groups.has(food_type):
 			groups[food_type].append(SelectionItemData.new(food_item))
 		else:

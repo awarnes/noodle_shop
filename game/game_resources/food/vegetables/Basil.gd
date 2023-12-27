@@ -1,12 +1,13 @@
-class_name Basil extends Food
+class_name Basil extends BaseVegetable
 
 func _init():
+	super()
 	title = "Basil"
 	description = "Delicious Basil"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
-
+	sub_type = VegetableSubType.Herb
+	
 	base_cost = 500
 
 	storage_method = BaseStorage.StorageType.Refrigerator

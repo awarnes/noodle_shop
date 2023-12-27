@@ -1,12 +1,13 @@
-class_name Broccoli extends Food
+class_name Broccoli extends BaseVegetable
 
 func _init():
+	super()
 	title = "Broccoli"
 	description = "Delicious Broccoli"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
-
+	sub_type = VegetableSubType.Cabbage
+	
 	base_cost = 500
 
 	storage_method = BaseStorage.StorageType.Refrigerator

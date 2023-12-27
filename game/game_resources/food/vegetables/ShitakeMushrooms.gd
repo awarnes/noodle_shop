@@ -1,11 +1,12 @@
-class_name ShitakeMushrooms extends Food
+class_name ShitakeMushrooms extends BaseVegetable
 
 func _init():
+	super()
 	title = "Shitake Mushroom"
 	description = "Delicious Shitake Mushroom"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Mushroom
 
 	base_cost = 500
 

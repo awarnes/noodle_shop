@@ -1,11 +1,12 @@
-class_name Potato extends Food
+class_name Potato extends BaseVegetable
 
 func _init():
+	super()
 	title = "Potato"
 	description = "Delicious Potato"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Starch
 
 	base_cost = 500
 

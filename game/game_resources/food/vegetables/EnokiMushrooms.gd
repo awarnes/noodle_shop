@@ -1,12 +1,13 @@
-class_name EnokiMushrooms extends Food
+class_name EnokiMushrooms extends BaseVegetable
 
 func _init():
+	super()
 	title = "Enoki Mushrooms"
 	description = "Delicious Enoki Mushrooms"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
-
+	sub_type = VegetableSubType.Mushroom
+	
 	base_cost = 500
 
 	storage_method = BaseStorage.StorageType.Refrigerator

@@ -1,11 +1,9 @@
-class_name NashiPear extends Food
+class_name NashiPear extends BaseFruit
 
 func _init():
 	title = "Nashi Pear"
 	description = "Nashi Pear-y fruit"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Fruit
 
 	base_cost = 150
 

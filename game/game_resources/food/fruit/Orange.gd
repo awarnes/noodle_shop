@@ -1,11 +1,9 @@
-class_name Orange extends Food
+class_name Orange extends BaseFruit
 
 func _init():
 	title = "Orange"
 	description = "Orange-y fruit"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Fruit
 
 	base_cost = 150
 

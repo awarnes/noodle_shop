@@ -1,11 +1,12 @@
-class_name RedCabbage extends Food
+class_name RedCabbage extends BaseVegetable
 
 func _init():
+	super()
 	title = "Red Cabbage"
 	description = "Delicious Red Cabbage"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Cabbage
 
 	base_cost = 500
 

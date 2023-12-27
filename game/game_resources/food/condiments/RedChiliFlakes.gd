@@ -1,11 +1,12 @@
-class_name RedChiliFlakes extends Food
+class_name RedChiliFlakes extends BaseCondiment
 
 func _init():
+	super()
 	title = "Red Chili Flakes"
 	description = "Red Chili Flake-y condiment"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Condiment
+	sub_type = CondimentSubType.Dry
 
 	base_cost = 150
 

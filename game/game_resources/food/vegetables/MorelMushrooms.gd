@@ -1,11 +1,12 @@
-class_name MorelMushrooms extends Food
+class_name MorelMushrooms extends BaseVegetable
 
 func _init():
+	super()
 	title = "Morel Mushrooms"
 	description = "Delicious Morel Mushrooms"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Mushroom
 
 	base_cost = 500
 

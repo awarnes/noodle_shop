@@ -1,11 +1,12 @@
-class_name GreenPepper extends Food
+class_name GreenPepper extends BaseVegetable
 
 func _init():
+	super()
 	title = "Green Pepper"
 	description = "Delicious Green Pepper"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
+	sub_type = VegetableSubType.Pepper
 
 	base_cost = 500
 

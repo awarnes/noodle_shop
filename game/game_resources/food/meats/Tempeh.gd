@@ -1,4 +1,4 @@
-class_name Tempeh extends Food
+class_name Tempeh extends BaseMeat
 
 func _init():
 	title = "Tempeh"

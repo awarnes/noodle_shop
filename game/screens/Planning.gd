@@ -9,8 +9,13 @@ func _on_food_button_pressed():
 	var food_screen_data = FoodScreenData.new()
 	Global.load_selection_screen(food_screen_data)
 
-func _on_kitchen_button_pressed():
-	prints("pressed button!")
+func _on_department_store_button_pressed():
+	var department_store_screen_data = DepartmentStoreScreenData.new()
+	Global.load_selection_screen(department_store_screen_data)
+
+func _on_recipe_book_button_pressed():
+	var recipe_book_screen_data = RecipeBookScreenData.new()
+	Global.load_selection_screen(recipe_book_screen_data)
 
 func _on_options_button_pressed():
 	var options_menu = get_node("OptionsMenu")
@@ -36,3 +41,6 @@ func _on_shopping_button_pressed():
 
 func _on_start_day_button_pressed():
 	prints("PRESSED START DAY!!")
+
+
+

@@ -1,12 +1,13 @@
-class_name Carrots extends Food
+class_name Carrots extends BaseVegetable
 
 func _init():
+	super()
 	title = "Carrots"
 	description = "Delicious Carrots"
 	icon = "res://icon.svg"
 	
-	type = FoodType.Vegetable
-
+	sub_type = VegetableSubType.Starch
+	
 	base_cost = 500
 
 	storage_method = BaseStorage.StorageType.Refrigerator

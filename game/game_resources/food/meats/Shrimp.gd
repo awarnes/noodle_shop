@@ -1,11 +1,9 @@
-class_name Shrimp extends Food
+class_name Shrimp extends BaseMeat
 
 func _init():
 	title = "Shrimp"
 	description = "Delicious Shrimp"
 	icon = "res://icon.svg"
-	
-	type = FoodType.Meat
 
 	base_cost = 500
 
