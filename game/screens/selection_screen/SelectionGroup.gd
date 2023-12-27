@@ -13,4 +13,3 @@ func _ready():
 		selection_item.icon = item.icon
 		selection_item.pressed.connect(display_item_function.bind(item))
 		grid_container.add_child(selection_item)
-	get_tree().process_frame

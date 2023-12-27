@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfbwq12ftxynb"]
+[gd_scene load_steps=3 format=3 uid="uid://cfbwq12ftxynb"]
 
 [ext_resource type="Script" path="res://game/screens/Planning.gd" id="1_wfplt"]
+[ext_resource type="PackedScene" uid="uid://sot1sh52ti65" path="res://menus/options_menu/OptionsMenu.tscn" id="2_n4rfw"]
 
 [node name="PlanningScene" type="Control"]
 layout_mode = 3
@@ -33,38 +34,99 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="ShoppingGridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 4
 
-[node name="FoodButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="IngredientsButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/ShoppingGridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "FOOD"
+text = "Ingredients"
 
-[node name="KitchenButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="KitchenUpgradesButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/ShoppingGridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "KITCHEN"
+text = "Kitchen Upgrades"
 
-[node name="ShopButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="RecipesButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/ShoppingGridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "SHOP"
+text = "Recipes"
 
-[node name="MiscButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="PlanningGridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 20
+columns = 3
+
+[node name="RestaurantButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "MISC"
+text = "Restaurant"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/GridContainer"]
+[node name="ShoppingButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Quit"
+theme_override_font_sizes/font_size = 64
+text = "Shopping"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/GridContainer/FoodButton" to="." method="_on_food_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/GridContainer/KitchenButton" to="." method="_on_kitchen_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="StartDayButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Start Day"
+
+[node name="RestaurantGridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 20
+columns = 5
+
+[node name="ProvisionsButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/RestaurantGridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Provisions"
+
+[node name="KitchenUpdatesButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/RestaurantGridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Kitchen Updates
+"
+
+[node name="UpgradesButtons" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/RestaurantGridContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Upgrades"
+
+[node name="HBoxContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 25
+text = "Back"
+
+[node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 25
+text = "Options"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("2_n4rfw")]
+title = "Options"
+visible = false
+borderless = false
+always_on_top = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/ShoppingGridContainer/IngredientsButton" to="." method="_on_food_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/ShoppingGridContainer/KitchenUpgradesButton" to="." method="_on_kitchen_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer/RestaurantButton" to="." method="_on_restaurant_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer/ShoppingButton" to="." method="_on_shopping_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer/StartDayButton" to="." method="_on_start_day_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

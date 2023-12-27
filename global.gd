@@ -28,12 +28,8 @@ func goto_scene(path):
 
 func _deferred_goto_scene(path):
 	current_scene.free()
-	prints("Going to load: %s" % path)
 	var new_scene = ResourceLoader.load(path)
 	
 	current_scene = new_scene.instantiate()
 	
 	get_tree().root.add_child(current_scene)
-	
-	# Optionally, to make it compatible with the SceneTree.change_scene_to_file() API.
-	#get_tree().current_scene = current_scene
