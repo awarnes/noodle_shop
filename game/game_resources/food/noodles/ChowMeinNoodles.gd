@@ -1,6 +1,7 @@
 class_name ChowMeinNoodles extends BaseNoodle
 
 func _init():
+	super()
 	title = "Chow Mein Noodles"
 	description = "Delicious Chow Mein Noodles"
 	icon = "res://icon.svg"

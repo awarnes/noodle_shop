@@ -1,6 +1,7 @@
 class_name Pork extends BaseProtein
 
 func _init():
+	super()
 	title = "Pork"
 	description = "Delicious Pork"
 	icon = "res://icon.svg"

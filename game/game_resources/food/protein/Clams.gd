@@ -1,6 +1,7 @@
 class_name Clams extends BaseProtein
 
 func _init():
+	super()
 	title = "Clams"
 	description = "Delicious Clams"
 	icon = "res://icon.svg"

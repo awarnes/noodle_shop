@@ -1,8 +1,9 @@
-class_name GlassNoodles extends BaseNoodle
+class_name VermicelliNoodles extends BaseNoodle
 
 func _init():
-	title = "Glass Noodles"
-	description = "Delicious Glass Noodles"
+	super()
+	title = "Vermicelli Noodles"
+	description = "Delicious thin noodles made from rice"
 	icon = "res://icon.svg"
 
 	base_cost = 500

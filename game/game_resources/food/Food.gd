@@ -16,17 +16,17 @@ func get_food_name(food_type: FoodType):
 		FoodType.Broth:
 			return "Broth"
 		FoodType.Condiment:
-			return "Condiment"
+			return "Condiments"
 		FoodType.Fruit:
 			return "Fruit"
 		FoodType.Noodle:
-			return "Noodle"
+			return "Noodles"
 		FoodType.Protein:
 			return "Protein"
 		FoodType.Sauce:
-			return "Sauce"
+			return "Sauces"
 		FoodType.Vegetable:
-			return "Vegetable"
+			return "Vegetables"
 
 var base_cost: int
 

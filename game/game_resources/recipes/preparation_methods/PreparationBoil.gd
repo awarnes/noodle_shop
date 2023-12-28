@@ -1,4 +1,4 @@
-class_name PreparationBoil extends PreparationMethod
+class_name PreparationBoil extends BasePreparationMethod
 
 func _init(required: bool = false):
 	super(required)

@@ -1,6 +1,7 @@
 class_name Plumb extends BaseFruit
 
 func _init():
+	super()
 	title = "Plumb"
 	description = "Plumb-y fruit"
 	icon = "res://icon.svg"

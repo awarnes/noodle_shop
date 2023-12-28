@@ -1,10 +1,12 @@
 class_name PreparationMethodDisplay extends MarginContainer
 
-@onready var title = get_node("VBoxContainer/Label")
 @onready var container = get_node("VBoxContainer")
+@onready var title = get_node("VBoxContainer/TitleLabel")
+@onready var required = get_node("VBoxContainer/RequiredLabel")
 
-func _init(method: PreparationMethod):
+func _init(method: BasePreparationMethod):
 	title.text = method.title
+	required.text = str(method.required_method)
 	if (method.required_prep_tools.size()):
 		var prep_label = Label.new()
 		prep_label.text = "Prep Tools"

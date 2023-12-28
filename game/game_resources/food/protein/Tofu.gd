@@ -1,6 +1,7 @@
 class_name Tofu extends BaseProtein
 
 func _init():
+	super()
 	title = "Tofu"
 	description = "Delicious Tofu"
 	icon = "res://icon.svg"

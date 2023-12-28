@@ -1,6 +1,7 @@
 class_name NashiPear extends BaseFruit
 
 func _init():
+	super()
 	title = "Nashi Pear"
 	description = "Nashi Pear-y fruit"
 	icon = "res://icon.svg"

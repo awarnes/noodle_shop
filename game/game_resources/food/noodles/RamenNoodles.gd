@@ -1,6 +1,7 @@
 class_name RamenNoodles extends BaseNoodle
 
 func _init():
+	super()
 	title = "Ramen Noodles"
 	description = "Delicious Ramen Noodles"
 	icon = "res://icon.svg"

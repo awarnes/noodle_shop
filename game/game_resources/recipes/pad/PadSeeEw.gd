@@ -1,18 +1,18 @@
-class_name YakiUdonRecipe extends Recipe
+class_name PadSeeEw extends Recipe
 
 func _init():
-	title = "Yaki Udon"
-	description = "Delicious fried udon noodles"
+	title = "Pad See Ew"
+	description = "Delicious wide sen yai rice noodles fried with soy sauce"
 	
 	level_req = 1
 	cost = 500
 	
 	ingredients = [
-		NoodleIngredient.new(BaseIngredient.Requirement.Required, UdonNoodles.new()),
+		NoodleIngredient.new(BaseIngredient.Requirement.Required, SenYaiNoodles.new()),
+		SauceIngredient.new(BaseIngredient.Requirement.Required, SoySauce.new()),
 		SauceIngredient.new(BaseIngredient.Requirement.Required, SesameOil.new()),
-		SauceIngredient.new(BaseIngredient.Requirement.Optional),
 		ProteinIngredient.new(BaseIngredient.Requirement.Optional),
-		VegetableIngredient.new(BaseIngredient.Requirement.Optional),
+		VegetableIngredient.new(BaseIngredient.Requirement.Required, Broccoli.new()),
 		VegetableIngredient.new(BaseIngredient.Requirement.Optional),
 		VegetableIngredient.new(BaseIngredient.Requirement.Optional),
 		CondimentIngredient.new(BaseIngredient.Requirement.Optional),
@@ -21,5 +21,5 @@ func _init():
 	
 	preparation_methods = [
 		PreparationChop.new(),
-		PreparationPanFry.new()
+		PreparationPanFry.new(),
 	]

@@ -1,19 +1,21 @@
-class_name UdonNoodleSoup extends Recipe
+class_name RamenNoodleSoup extends Recipe
 
 func _init():
-	title = "Udon Noodle Soup"
-	description = "Delicious fat udon noodles in a tasy broth"
+	title = "Ramen Noodle Soup"
+	description = "Delicious ramen noodles in a tasty broth"
 	
 	level_req = 1
 	cost = 500
 	
 	ingredients = [
-		NoodleIngredient.new(BaseIngredient.Requirement.Required, UdonNoodles.new()),
+		NoodleIngredient.new(BaseIngredient.Requirement.Required, RamenNoodles.new()),
 		BrothIngredient.new(BaseIngredient.Requirement.Required),
 		ProteinIngredient.new(BaseIngredient.Requirement.Optional),
 		VegetableIngredient.new(BaseIngredient.Requirement.Optional),
 		VegetableIngredient.new(BaseIngredient.Requirement.Optional),
 		VegetableIngredient.new(BaseIngredient.Requirement.Optional),
+		SauceIngredient.new(BaseIngredient.Requirement.Optional),
+		SauceIngredient.new(BaseIngredient.Requirement.Optional),
 		CondimentIngredient.new(BaseIngredient.Requirement.Optional),
 		CondimentIngredient.new(BaseIngredient.Requirement.Optional)
 	]

@@ -1,6 +1,7 @@
 class_name Chicken extends BaseProtein
 
 func _init():
+	super()
 	title = "Chicken"
 	description = "Delicious Chicken"
 	icon = "res://icon.svg"

@@ -1,6 +1,7 @@
 class_name Shrimp extends BaseProtein
 
 func _init():
+	super()
 	title = "Shrimp"
 	description = "Delicious Shrimp"
 	icon = "res://icon.svg"

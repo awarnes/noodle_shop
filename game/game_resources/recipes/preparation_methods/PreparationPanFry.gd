@@ -1,4 +1,4 @@
-class_name PreparationPanFry extends PreparationMethod
+class_name PreparationPanFry extends BasePreparationMethod
 
 func _init(required: bool = false):
 	super(required)

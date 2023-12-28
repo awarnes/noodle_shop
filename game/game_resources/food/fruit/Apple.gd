@@ -1,6 +1,7 @@
 class_name Apple extends BaseFruit
 
 func _init():
+	super()
 	title = "Apple"
 	description = "Apple-y fruit"
 	icon = "res://icon.svg"

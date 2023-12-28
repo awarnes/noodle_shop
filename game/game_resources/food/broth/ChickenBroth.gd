@@ -1,6 +1,7 @@
 class_name ChickenBroth extends BaseBroth
 
 func _init():
+	super()
 	title = "Chicken Broth"
 	description = "Delicious Chicken Broth"
 	icon = "res://icon.svg"

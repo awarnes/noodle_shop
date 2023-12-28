@@ -1,9 +1,9 @@
-class_name Tempeh extends BaseProtein
+class_name GlassNoodles extends BaseNoodle
 
 func _init():
 	super()
-	title = "Tempeh"
-	description = "Delicious Tempeh"
+	title = "Glass Noodles"
+	description = "Delicious Glass Noodles made from mung bean flour"
 	icon = "res://icon.svg"
 
 	base_cost = 500

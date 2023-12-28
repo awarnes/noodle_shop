@@ -4,17 +4,24 @@ func _init():
 	title = "Recipe Book"
 	background = null
 	
-	var recipes: Array[Recipe] = [
-	]
+	var recipes = {
+		"Fried Noodles": [
+			SelectionItemData.new(ChowMeinRecipe.new()),
+			SelectionItemData.new(LoMeinRecipe.new()),
+			SelectionItemData.new(PadSeeEw.new()),
+			SelectionItemData.new(PadThai.new()),
+			SelectionItemData.new(YakiSoba.new()),
+			SelectionItemData.new(YakiUdonRecipe.new()),
+		],
+		"Noodle Soups": [
+			SelectionItemData.new(PhoRecipe.new()),
+			SelectionItemData.new(RamenNoodleSoup.new()),
+			SelectionItemData.new(UdonNoodleSoup.new()),
+		],
+		"Cold Noodles": [
+			SelectionItemData.new(ZaruSoba.new()),
+		],
+	}
 	
-	var groups = {}
-	
-	for recipe in recipes:
-		var recipe_type = Recipe.new().get__name(food_item.type)
-		if groups.has(food_type):
-			groups[food_type].append(SelectionItemData.new(food_item))
-		else:
-			groups[food_type] = [SelectionItemData.new(food_item)]
-	
-	for group_key in groups.keys():
-		selection_groups.append(SelectionGroupData.new(group_key, groups[group_key]))
+	for group_key in recipes.keys():
+		selection_groups.append(SelectionGroupData.new(group_key, recipes[group_key]))

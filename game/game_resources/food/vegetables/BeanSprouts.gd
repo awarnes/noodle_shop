@@ -1,11 +1,13 @@
-class_name Tempeh extends BaseProtein
+class_name BeanSprouts extends BaseVegetable
 
 func _init():
 	super()
-	title = "Tempeh"
-	description = "Delicious Tempeh"
+	title = "Bean Sprouts"
+	description = "Delicious fresh bean sprouts"
 	icon = "res://icon.svg"
-
+	
+	sub_type = VegetableSubType.Herb
+	
 	base_cost = 500
 
 	storage_method = BaseStorage.StorageType.Refrigerator

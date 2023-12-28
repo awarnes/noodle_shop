@@ -1,4 +1,4 @@
-class_name PreparationChop extends PreparationMethod
+class_name PreparationChop extends BasePreparationMethod
 
 func _init(required: bool = false):
 	super(required)
