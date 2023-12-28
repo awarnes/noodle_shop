@@ -1,4 +1,4 @@
-class_name Pork extends BaseMeat
+class_name Pork extends BaseProtein
 
 func _init():
 	title = "Pork"
@@ -10,10 +10,5 @@ func _init():
 	storage_method = BaseStorage.StorageType.Refrigerator
 
 	base_shelf_life = 30
-
-	preparation_methods = [
-		PreparationChop.new(),
-		PreparationPanFry.new(),
-	]
 
 	base_quality = 1

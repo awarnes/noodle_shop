@@ -14,9 +14,4 @@ func _init():
 
 	base_shelf_life = 30
 
-	preparation_methods = [
-		PreparationChop.new(),
-		PreparationPanFry.new()
-	]
-
 	base_quality = 1

@@ -1,29 +1,32 @@
 class_name Food extends GameResource
 
 enum FoodType {
-	Noodle,
-	Vegetable,
-	Meat,
-	Fruit,
 	Broth,
 	Condiment,
+	Fruit,
+	Noodle,
+	Protein,
+	Sauce,
+	Vegetable,
 }
 var type: FoodType
 
 func get_food_name(food_type: FoodType):
 	match food_type:
-		FoodType.Noodle:
-			return "Noodle"
-		FoodType.Vegetable:
-			return "Vegetable"
-		FoodType.Meat:
-			return "Meat"
-		FoodType.Fruit:
-			return "Fruit"
 		FoodType.Broth:
 			return "Broth"
 		FoodType.Condiment:
 			return "Condiment"
+		FoodType.Fruit:
+			return "Fruit"
+		FoodType.Noodle:
+			return "Noodle"
+		FoodType.Protein:
+			return "Protein"
+		FoodType.Sauce:
+			return "Sauce"
+		FoodType.Vegetable:
+			return "Vegetable"
 
 var base_cost: int
 
@@ -31,8 +34,6 @@ var storage_method: BaseStorage.StorageType
 
 var base_shelf_life: int
 var current_shelf_life: int
-
-var preparation_methods: Array[PreparationMethod]
 
 var base_quality: int
 
@@ -48,12 +49,6 @@ func get_attributes_display() -> Array[Node]:
 
 func calculate_cost():
 	return base_cost + (1 * base_quality)
-
-func can_prepare():
-	for method: PreparationMethod in preparation_methods:
-		if not method.can_use():
-			return false
-	return true
 
 #func calculate_quality(prep_tool: BasePrepTool):
 	#var quality = base_quality

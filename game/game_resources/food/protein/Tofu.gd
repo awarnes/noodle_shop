@@ -1,4 +1,4 @@
-class_name Tofu extends BaseMeat
+class_name Tofu extends BaseProtein
 
 func _init():
 	title = "Tofu"
@@ -10,10 +10,5 @@ func _init():
 	storage_method = BaseStorage.StorageType.Refrigerator
 
 	base_shelf_life = 30
-
-	preparation_methods = [
-		PreparationChop.new(),
-		PreparationPanFry.new(),
-	]
 
 	base_quality = 1

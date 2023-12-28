@@ -3,36 +3,21 @@ class_name Recipe extends GameResource
 @export var level_req: int
 @export var cost: int
 
-@export var base_selling_price: int
+@export var ingredients: Array[BaseIngredient]
+@export var preparation_methods: Array[PreparationMethod]
 
-# Ingredients
-@export var noodles: BaseNoodle
-@export var broth: BaseBroth
-@export var condiments: Array[BaseCondiment]
-@export var meats: Array[BaseMeat]
-@export var vegetables: Array[BaseVegetable]
-
-func get_ingredients() -> Array[Food]:
-	var ingredients = []
-	ingredients.append(noodles)
-	ingredients.append(broth)
-	for condiment in condiments:
-		ingredients.append(condiment)
-	for meat in meats:
-		ingredients.append(meat)
-	for vegetable in vegetables:
-		ingredients.append(vegetable)
+func can_make_recipe():
+	for ingredient: BaseIngredient in ingredients:
+		if ingredient.requirement == BaseIngredient.Requirement.Required and \
+			not ingredient.is_available():
+				return false
 	
-	return ingredients
-
-func calculate_selling_price(used_ingredients: Array[Food]):
-	var price: int = base_selling_price
-	for ingredient: Food in used_ingredients:
-		price += ingredient.get_price_bonus()
-	return price
-
-func is_available():
-	for ingredient: Food in Player.stock:
-		if not ingredient.is_available():
-			return false
+	for method in preparation_methods:
+		if method.required_method:
+			for cooking_tool in method.required_cooking_tools:
+				if not Player.inventory.has_tool_type(cooking_tool):
+					return false
+			for prep_tool in method.required_prep_tools:
+				if not Player.inventory.has_tool_type(prep_tool):
+					return false
 	return true

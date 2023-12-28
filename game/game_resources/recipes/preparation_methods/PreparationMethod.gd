@@ -5,6 +5,11 @@ class_name PreparationMethod extends Resource
 @export var required_prep_tools: Array[BasePrepTool.PrepToolType]
 @export var required_cooking_tools: Array[BaseCookingTool.CookingToolType]
 
+@export var required_method: bool
+
+func _init(required = false):
+	required_method = required
+
 func can_use():
 	for prep_tool in required_prep_tools:
 		if not Player.inventory.has_prep_tool_of_type(prep_tool):
