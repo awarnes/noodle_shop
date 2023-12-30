@@ -1,4 +1,4 @@
-class_name Recipe extends GameResource
+class_name BaseRecipe extends GameResource
 
 @export var level_req: int
 @export var cost: int

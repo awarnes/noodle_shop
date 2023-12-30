@@ -1,4 +1,4 @@
-class_name ChowMeinRecipe extends Recipe
+class_name ChowMeinRecipe extends BaseRecipe
 
 func _init():
 	title = "Chow Mein"

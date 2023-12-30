@@ -1,4 +1,4 @@
-class_name PadThai extends Recipe
+class_name PadThai extends BaseRecipe
 
 func _init():
 	title = "Pad Thai"

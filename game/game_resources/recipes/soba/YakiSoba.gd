@@ -1,4 +1,4 @@
-class_name YakiSoba extends Recipe
+class_name YakiSoba extends BaseRecipe
 
 func _init():
 	title = "Yaki Soba"

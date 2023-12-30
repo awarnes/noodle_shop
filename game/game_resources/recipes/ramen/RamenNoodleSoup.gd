@@ -1,4 +1,4 @@
-class_name RamenNoodleSoup extends Recipe
+class_name RamenNoodleSoup extends BaseRecipe
 
 func _init():
 	title = "Ramen Noodle Soup"

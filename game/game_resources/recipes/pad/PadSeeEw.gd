@@ -1,4 +1,4 @@
-class_name PadSeeEw extends Recipe
+class_name PadSeeEw extends BaseRecipe
 
 func _init():
 	title = "Pad See Ew"

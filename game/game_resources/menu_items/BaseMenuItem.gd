@@ -1,7 +1,7 @@
 class_name BaseMenuItem extends GameResource
 
 @export var price: int
-@export var recipe: Recipe
+@export var recipe: BaseRecipe
 
 
 
