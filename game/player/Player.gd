@@ -4,6 +4,10 @@ var title: String
 
 var inventory: PlayerInventory
 
+var upgrades: PlayerUpgrades
+
+var restaurant: BaseRestaurant
+
 var money: int
 var level: int
 

@@ -33,7 +33,7 @@ var base_cost: int
 var storage_method: BaseStorage.StorageType
 
 var base_shelf_life: int
-var current_shelf_life: int
+var age: int
 
 var base_quality: int
 
@@ -58,4 +58,3 @@ func calculate_cost():
 		#for tool in method.required_cooking_tools:
 			#quality += tool.quality_bonus
 	#return quality
-
