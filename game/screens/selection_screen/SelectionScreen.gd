@@ -50,4 +50,4 @@ func _update_secondary_data(selection_data: SelectionItemData):
 	selection_details.move_child(secondary_information, selection_details.get_children().size() - 1)
 
 func _on_back_button_pressed():
-	Global.goto_scene("res://game/screens/PlanningScene.tscn")
+	Global.goto_scene("res://game/screens/planning/Planning.tscn")

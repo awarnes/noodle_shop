@@ -37,6 +37,9 @@ var age: int
 
 var base_quality: int
 
+func _init():
+	resource_type = ResourceType.Food
+
 func get_attributes_display() -> Array[Node]:
 	var helper = Helpers.new()
 	return [

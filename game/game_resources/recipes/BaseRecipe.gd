@@ -6,6 +6,9 @@ class_name BaseRecipe extends GameResource
 @export var ingredients: Array[BaseIngredient]
 @export var preparation_methods: Array[BasePreparationMethod]
 
+func _init():
+	resource_type = ResourceType.Recipe
+
 func get_attributes_display() -> Array[Node]:
 	var helper = Helpers.new()
 	var display_attributes: Array[Node] = [

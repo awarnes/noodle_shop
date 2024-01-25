@@ -7,7 +7,7 @@ var description: Label
 func _init(resource_title: String, resource_description: String):
 	vbox = VBoxContainer.new()
 	add_child(vbox)
-	# TODO: May need to figure out scorll containers at some point
+	# TODO: May need to figure out scroll containers at some point
 	
 	title = Label.new()
 	title.text = resource_title

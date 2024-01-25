@@ -14,6 +14,9 @@ enum CookingToolType {
 @export var quality_bonus: int
 @export var speed_bonus: int
 
+func _init():
+	resource_type = ResourceType.CookingTool
+
 func get_tool_name(tool_type: CookingToolType):
 	match tool_type:
 		CookingToolType.Oven:

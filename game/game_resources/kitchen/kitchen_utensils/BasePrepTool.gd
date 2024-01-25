@@ -13,6 +13,9 @@ enum PrepToolType {
 @export var quality_bonus: int
 @export var speed_bonus: int
 
+func _init():
+	resource_type = ResourceType.PrepTool
+
 func get_tool_name(tool_type: PrepToolType):
 	match tool_type:
 		PrepToolType.CuttingBoard:

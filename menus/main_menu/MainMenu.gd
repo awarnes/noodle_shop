@@ -8,4 +8,4 @@ func _on_settings_button_pressed():
 
 func _on_play_button_pressed():
 	Player.start_game()
-	Global.goto_scene("res://game/screens/PlanningScene.tscn")
+	Global.goto_scene("res://game/screens/planning/Planning.tscn")

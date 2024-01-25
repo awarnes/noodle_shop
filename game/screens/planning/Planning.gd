@@ -1,7 +1,7 @@
 extends Control
 
-@onready var planning_grid_container = get_node("MarginContainer/VBoxContainer/MarginContainer/PlanningGridContainer")
-@onready var back_button = get_node("MarginContainer/VBoxContainer/HBoxContainer/BackButton")
+@onready var planning_grid_container = get_node("MarginContainer/VBoxContainer/PlanningInteractionContainer/PlanningGridContainer")
+@onready var back_button = get_node("MarginContainer/VBoxContainer/PlanningOptionsContainer/BackButton")
 
 var current_selection_container: GridContainer
 
@@ -28,13 +28,13 @@ func _on_back_button_pressed():
 	back_button.visible = false
 
 func _on_restaurant_button_pressed():
-	current_selection_container = get_node("MarginContainer/VBoxContainer/MarginContainer/RestaurantGridContainer")
+	current_selection_container = get_node("MarginContainer/VBoxContainer/PlanningInteractionContainer/RestaurantGridContainer")
 	current_selection_container.visible = true
 	planning_grid_container.visible = false
 	back_button.visible = true
 
 func _on_shopping_button_pressed():
-	current_selection_container = get_node("MarginContainer/VBoxContainer/MarginContainer/ShoppingGridContainer")
+	current_selection_container = get_node("MarginContainer/VBoxContainer/PlanningInteractionContainer/ShoppingGridContainer")
 	current_selection_container.visible = true
 	planning_grid_container.visible = false
 	back_button.visible = true
